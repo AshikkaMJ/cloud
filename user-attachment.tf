@@ -1,6 +1,6 @@
 
 resource "aws_iam_policy_attachment" "ashi" {
   name       = "example-attachment"
-  users      = [aws_iam_user.ashi.name]
-  group      = aws_iam_group.ashi.name
+  users      = [aws_iam_user.ashi.s3-access]
+  group      = aws_iam_group.ashi.s3-access
 }
