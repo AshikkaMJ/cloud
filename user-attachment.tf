@@ -1,6 +1,5 @@
-
-resource "aws_iam_policy_attachment" "ashi" {
-  name       = "example-attachment"
-  users      = [aws_iam_user.ashi.s3-access]
-  group      = aws_iam_group.ashi.s3-access
+resource "aws_iam_policy_attachment" "ashi_s3" {
+  name       = "attach-s3-policy-to-user"
+  users      = [aws_iam_user.ashi.name]
+  policy_arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
 }
